@@ -1,0 +1,18 @@
+﻿@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        <h1>@Model.Text</h1>
+        <form asp-controller="Home" asp-action="Search" method="post">
+            <textarea style=" width:50%" name="depth" type="text" maxlength="1000" required></textarea>
+            <textarea style=" width:50%" name="text2" type="text" maxlength="1000" required></textarea>
+
+            <button asp-controller="Home" asp-action="Search" type="submit">Send</button>
+        </form>
+        <h1>URL</h1>
+       
+        <button><a asp-controller="Home" asp-action="Index">Search</a></button>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>

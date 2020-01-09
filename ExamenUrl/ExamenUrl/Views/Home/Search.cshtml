@@ -1,0 +1,12 @@
+﻿@model SearchModel
+@{
+    ViewData["Title"] = "Search";
+}
+<h1>@Model.Text.Count</h1>
+<form>
+    <button asp-controller="Home" asp-action="Save">Save</button>
+</form>
+@foreach(var e in Model.Text)
+{
+    <p>@e</p>
+}
